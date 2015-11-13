@@ -1,0 +1,2 @@
+set SCRIPT_DIR=%~dp0
+java -Dsbt.override.build.repos=true -Dsbt.repository.config=sbtRepositories  -Dsbt.boot.realm="Artifactory Realm" -Dsbt.boot.host="artifactory.its.monash.edu" -Dsbt.boot.user=sbt -Dsbt.boot.password=password -Xmx2G -Xss2M -XX:MaxPermSize=1024m -XX:+CMSClassUnloadingEnabled -Djetty.port=8081 -jar %SCRIPT_DIR%/sbt-launch-0.13.6.jar %*
